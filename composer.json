@@ -1,0 +1,26 @@
+{
+    "name": "zetgram/core",
+    "description": "PHP framework for Telegram bot API",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "kriptonuz",
+            "email": "kripton253@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Zetgram\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "php" : "^7.4",
+        "ext-json": "*",
+        "psr/container": "^1.0",
+        "guzzlehttp/guzzle": "^6.5",
+        "predis/predis": "^1.1",
+        "illuminate/translation": "^6.8"
+    }
+}
