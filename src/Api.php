@@ -1,6 +1,6 @@
 <?php
 
-namespace Bot;
+namespace Zetgram;
 
 use GuzzleHttp\Client as HttpClient;
 
