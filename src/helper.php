@@ -70,7 +70,7 @@ if(!function_exists('escapeMarkdown')) {
 }
 
 if(!function_exists('entityToFormat')) {
-    function entityToFormat(string $text, array $entities, $format = 'html'): string {
+    function entityToFormat(string $text, iterable $entities, $format = 'html'): string {
         $templates = [
             'html' => [
                 'text_link' => '<a href="url">text</a>',
@@ -127,7 +127,7 @@ if(!function_exists('entityToFormat')) {
 }
 
 if(!function_exists('entityToHtml')) {
-    function entityToHtml(string $text, array $entities): string
+    function entityToHtml(string $text, iterable $entities): string
     {
         return entityToFormat($text, $entities, 'html');
     }
@@ -140,7 +140,7 @@ if(!function_exists('entityToMarkdown')) {
      * @return string
      * @deprecated use MarkdownV2 instead
      */
-    function entityToMarkdown(string $text, array $entities): string
+    function entityToMarkdown(string $text, iterable $entities): string
     {
         return entityToFormat($text, $entities, 'markdown');
     }
