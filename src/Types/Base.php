@@ -13,4 +13,9 @@ class Base
     protected function build(stdClass $data)
     {
     }
+
+    public function __debugInfo()
+    {
+        return array_filter(get_object_vars($this));
+    }
 }
