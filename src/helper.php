@@ -95,7 +95,7 @@ if(!function_exists('entityToFormat')) {
         $escape_fuction = 'escape' . ucfirst($format);
 
         foreach ($entities as $entity) {
-            if (!in_array($entity->type, ['text_link', 'bold', 'italic', 'code', 'pre']))
+            if (!in_array($entity->type, ['text_link', 'bold', 'italic', 'code', 'pre', 'strikethrough', 'underline']))
                 continue;
 
             if ($entity->offset !== $last_offset)
