@@ -75,4 +75,9 @@ class Collection implements Iterator, ArrayAccess, Countable
     {
         return count($this->items);
     }
+
+    public function last()
+    {
+        return $this->items[$this->count() - 1] ?? null;
+    }
 }
