@@ -1,6 +1,6 @@
 <?php
 
-namespace Zetgram;
+namespace Zetgram\Types;
 
 use stdClass;
 
