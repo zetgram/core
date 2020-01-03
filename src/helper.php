@@ -145,3 +145,12 @@ if(!function_exists('entityToMarkdown')) {
         return entityToFormat($text, $entities, 'markdown');
     }
 }
+
+if(!function_exists('getRequestBody')) {
+    /*
+     * @TODO move to other class
+     */
+    function getRequestBody() {
+        return json_encode(file_get_contents('php://input'));
+    }
+}
