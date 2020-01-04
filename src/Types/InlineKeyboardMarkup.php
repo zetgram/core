@@ -23,5 +23,6 @@ class InlineKeyboardMarkup extends Base
     protected function build(stdClass $data)
     {
         $this->inlineKeyboard = new InlineKeyboardButtonCollectionCollection($data->inline_keyboard);
+        return $this->inlineKeyboard;
     }
 }

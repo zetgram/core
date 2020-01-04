@@ -774,8 +774,8 @@ abstract class ApiAbstract
     public function restrictChatMember(
         $chat_id,
         int $user_id,
-        array $permissions,
-        int $until_date = null
+        int $until_date = null,
+        array $permissions = ['can_read_messages'=>true]
     ) {
         $args = [
             'chat_id'     => $chat_id,
@@ -1050,8 +1050,8 @@ abstract class ApiAbstract
         string $inline_message_id = null,
         string $text,
         string $parse_mode = null,
-        bool $disable_web_page_preview = null,
-        array $reply_markup = null
+        array $reply_markup = null,
+        bool $disable_web_page_preview = null
     ) {
         $args = [
             'text' => $text
