@@ -151,6 +151,6 @@ if(!function_exists('getRequestBody')) {
      * @TODO move to other class
      */
     function getRequestBody() {
-        return json_encode(file_get_contents('php://input'));
+        return json_decode(file_get_contents('php://input'));
     }
 }
