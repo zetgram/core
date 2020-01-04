@@ -17,7 +17,7 @@ class Chat extends Base
     * double-precision float type are safe for storing this identifier.
     * @var int
     */
-    public int $id;
+    public float $id;
 
     /**
     * Type of chat, can be either 'private', 'group', 'supergroup' or 'channel'
