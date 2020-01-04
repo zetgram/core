@@ -39,7 +39,7 @@ class Bot
         $this->container = $container;
     }
 
-    private function handleUpdate(Update $update)
+    public function handleUpdate(Update $update)
     {
         if (isset($update->message)) {
             foreach ($this->routes as $route) {
