@@ -10,7 +10,9 @@ use Zetgram\Filters\CallbackDataEqualFilter;
 use Zetgram\Filters\FilterInterface;
 use Zetgram\Filters\RegExpTextFilter;
 use Zetgram\Filters\TextEqualFilter;
+
 use Zetgram\Filters\RegExpCallbackDataFilter;
+
 class Bot
 {
     /**
