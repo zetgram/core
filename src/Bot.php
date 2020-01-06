@@ -11,6 +11,8 @@ use Zetgram\Filters\FilterInterface;
 use Zetgram\Filters\RegExpTextFilter;
 use Zetgram\Filters\TextEqualFilter;
 
+use Zetgram\Filters\RegExpCallbackDataFilter;
+
 class Bot
 {
     /**
@@ -83,6 +85,12 @@ class Bot
     {
         $this->unShift([RegExpTextFilter::class, $regExp], $filters);
         $this->addRoute($handler, ...$filters);
+    }
+
+    public function action(string $regExp, $handler, ...$filters)
+    {
+        $this->unShift([RegExpCallbackDataFilter::class, $regExp], $filters);
+        $this->addCallbackRoute($handler, ...$filters);
     }
 
     public function textEqual(string $text, $handler, ...$filters)
