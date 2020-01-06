@@ -2,7 +2,6 @@
 
 namespace Zetgram;
 
-
 use Zetgram\Types\Update;
 use Zetgram\Types\UpdateCollection;
 use Psr\Container\ContainerInterface;
